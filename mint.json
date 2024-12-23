@@ -17,8 +17,17 @@
   },
   "topbarLinks": [
     {
-      "name": "Support",
+      "name": "THSRtinsrt",
       "url": "https://github.com/nathanheffley/laravel-watermelon/issues"
+    }
+  ],
+  "primaryTab": {
+    "name": "Laravel"
+  },
+  "tabs": [
+    {
+      "name": "Frontend",
+      "url": "frontend"
     }
   ],
   "navigation": [
@@ -39,6 +48,12 @@
         "essentials/settings",
         "essentials/navigation",
         "essentials/reusable-snippets"
+      ]
+    },
+    {
+      "group": "Get Started",
+      "pages": [
+        "frontend/coming-soon"
       ]
     }
   ],
