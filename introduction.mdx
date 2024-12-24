@@ -8,14 +8,14 @@ Laravel Watermelon is an implementation of the
 <CardGroup cols={2}>
   <Card
     title="Official WatermelonDB Docs"
-    icon={<svg width="32" height="32" viewBox="0, -6, 16, 1"><text>🍉</text></svg>}
+    icon={<svg width="32" height="32" viewBox="-1, -6, 18, 1"><text>🍉</text></svg>}
     href="https://watermelondb.dev/docs"
   >
     Read the official WatermelonDB docs for more info on what it is
   </Card>
   <Card
-    title="Preview Changes"
-    icon="flask"
+    title="Demo Project"
+    icon="file-code"
     href="https://github.com/nathanheffley/laravel-watermelon-demos"
   >
     Check out our demo project to see what's possible
@@ -34,18 +34,6 @@ That's where this package comes in to provide a quick synchronization route you 
 **This project is still in active development** and does not support schema versions or migrations yet.
 Both of these are major parts of the Watermelon DB spec. Please expect large changes at least until those features are implemented.
 </Warning>
-
-## Installation
-
-Before getting started you'll need to install the package and publish the config file.
-
-```
-composer require nathanheffley/laravel-watermelon
-```
-
-```
-php artisan vendor:publish --tag="watermelon-config"
-```
 
 ## Usage
 
@@ -185,32 +173,4 @@ class Task extends Model
         return $query->where('user_id', Auth::user()->id);
     }
 }
-```
-
-## Package Development
-
-If you have PHP and Composer installed on your local machine you should be able to easily run the PHPUnit test suite.
-
-```
-./vendor/bin/phpunit
-```
-
-If you prefer to run the tests within a Docker container, this project includes
-[Laravel Sail](https://laravel.com/docs/8.x/sail).
-
-To install the dependencies:
-
-```
-docker run --rm \
-    -u "$(id -u):$(id -g)" \
-    -v $(pwd):/opt \
-    -w /opt \
-    laravelsail/php80-composer:latest \
-    composer install --ignore-platform-reqs
-
-docker-compose up -d
-```
-
-```
-sail exec laravel.test ./vendor/bin/phpunit
 ```
